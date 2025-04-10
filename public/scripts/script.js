@@ -1,9 +1,9 @@
 function payment(){
-    window.location = "payment.html"
+    window.location = "payment"
 }
 function shipping(){
-    window.location = "shipping.html"
+    window.location = "shipping"
 }
 function cart(){
-    window.location = "cart.html"
+    window.location = "cart"
 }
