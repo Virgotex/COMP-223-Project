@@ -42,7 +42,6 @@ app.get("/" , (req,res) => {
     if(!req.session.isLoggedIn){
         res.redirect("login")
     }
-    res.send("Page not implemented yet.")
 })
 app.post("/login", (req,res)=>{
     console.log(req.body)
