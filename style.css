@@ -406,3 +406,15 @@ footer {
     width: 100px;
     height: auto;
 }
+
+.logo-image {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
