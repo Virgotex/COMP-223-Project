@@ -396,3 +396,13 @@ footer {
     margin-top: 30px;
     background-color: #f0f0f0;
 }
+
+.product-image {
+    width: 100px;
+    height: auto;
+}
+
+.product-image-small {
+    width: 100px;
+    height: auto;
+}
