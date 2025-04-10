@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/css/shipping.css">
 </head>
 <script src="./public/scripts/script.js"></script>
 <body class="cart-page">
-    <div class="container">
-        <header>
-            <div class="logo">Logo</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-                <button>Search</button>
+    <div class="page-container">
+        <header class="app-header">
+            <div class="logo-placeholder">
+                </div>
+            <div class="search-container">
+              <input type="search" placeholder="Search..." aria-label="Search" />
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
+            <nav class="main-nav" aria-label="Main navigation">
+              <a href="home.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="shop.html">Shop</a>
+              <a href="help.html">Help</a>
             </nav>
-            <div class="cart">
-                <img src="placeholder-cart-icon.png" alt="Cart">
-                <span>Your Cart</span>
-            </div>
+            <button class="cart-button" type="button" onclick="cart()">
+              <span class="cart-icon-placeholder">[🛒]</span> Your Cart
+            </button>
         </header>
 
         <section class="steps">
