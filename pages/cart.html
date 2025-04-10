@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/shipping.css">
+</head>
+<script src="/scripts/script.js"></script>
+<body class="cart-page">
+    <div class="page-container">
+        <header class="app-header">
+            <div class="logo-placeholder">
+                </div>
+            <div class="search-container">
+              <input type="search" placeholder="Search..." aria-label="Search" />
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+              <a href="/">Home</a>
+              <a href="shop">Shop</a>
+            </nav>
+            <button class="cart-button" type="button" onclick="cart()">
+              <span class="cart-icon-placeholder">[🛒]</span> Your Cart
+            </button>
+        </header>
+
+        <section class="steps">
+            <span>1. Shopping Cart</span>
+            <span>2. Shipping Details</span>
+            <span>3. Payment Options</span>
+        </section>
+
+        <main class="main-content">
+            <section class="shopping-cart">
+                <h2>Shopping Cart</h2>
+                <div class="cart-item">
+                    <img src="placeholder-product-image.png" alt="Product" class="product-image">
+                    <div class="product-info">
+                        <div class="product-name">PRODUCT NAME</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                        <div class="product-price">KES 300</div>
+                    </div>
+                    <div class="quantity">
+                        <span>Quantity:</span>
+                        <input type="number" value="1" min="1" title="Enter quantity">
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="placeholder-product-image.png" alt="Product" class="product-image-small">
+                    <div class="product-info">
+                        <div class="product-name">PRODUCT NAME</div>
+                        <p>Cras auctor tortor in augue ultrices, ut viverra urna accumsan. Quisque euismod est.</p>
+                        <div class="product-price">KES 200</div>
+                    </div>
+                    <div class="quantity">
+                        <span>Quantity:</span>
+                        <input type="number" value="1" min="1" title="Enter quantity" placeholder="Enter quantity">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="next-btn" onclick="shipping()">Next</button>
+                </div>
+            </section>
+
+            <section class="summary">
+                <h2>Summary</h2>
+                <div class="summary-item">
+                    <span>SUBTOTAL</span>
+                    <span>KES 600</span>
+                </div>
+                <div class="summary-item">
+                    <span>SHIPPING</span>
+                    <span>FREE</span>
+                </div>
+                <div class="summary-item">
+                    <span>TAXES</span>
+                    <span>KES 13</span>
+                </div>
+                <div class="summary-total">
+                    <span>TOTAL</span>
+                    <span>KES 613</span>
+                </div>
+                <div class="coupon-code">
+                    <label for="coupon">ENTER COUPON CODE</label>
+                    <input type="text" id="coupon">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Thrift Store</p>
+        </footer>
+    </div>
+</body>
+</html>
