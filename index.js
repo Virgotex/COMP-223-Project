@@ -1,6 +1,10 @@
 let path = require("path")
 let express = require("express")
 let session = require("express-session")
+const bcrypt = require("bcryptjs")
+const { PrismaClient } = require('./generated/prisma')
+
+const prisma = new PrismaClient()
 
 
 let app = express();
@@ -22,7 +26,7 @@ app.get("/shop", (req,res) => {
     }
     res.sendFile(path.join(pages_root + "shop.html"))
 })
-app.get("/login", (req,res) => {
+app.get("/login", async (req,res) => {
     res.sendFile(path.join(pages_root + "login.html"))
 })
 app.get("/signup", (req,res) => {
@@ -43,12 +47,37 @@ app.get("/" , (req,res) => {
         res.redirect("login")
     }
 })
-app.post("/login", (req,res)=>{
+app.post("/login", async (req,res)=>{
     console.log(req.body)
+    const user = await prisma.user.findUnique({
+        where: {
+            email: req.body.email
+        }
+    })
     req.session.isLoggedIn = true;
     res.redirect("shop")
 })
-app.post("/signup", (req,res) => {
+app.post("/signup", async (req,res) => {
+    let salt = await bcrypt.genSalt(10);
+    let hash = await bcrypt.hash(req.body.password,salt)
+    const user = await prisma.user.findUnique({
+        where: {
+            email: req.body.email
+        }
+    })
+    if(user != null){
+        console.log("User exists!");     
+        req.session.isLoggedIn = false; 
+        return;
+    }
+    await prisma.user.create({
+        data: {
+            name:req.body.fullname,
+            email: req.body.email,
+            phone: req.body.phone,
+            password: hash
+        }
+    })
     req.session.isLoggedIn = true;
     console.log(req.body)
     res.redirect("shop")
