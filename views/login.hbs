@@ -38,7 +38,13 @@
                     <a href="signup" class="signup-link">Don't have an account?</a>
                 </div>
             </form>
+             {{#if message }}
+                <div class="error">
+                    <h1>{{message}}</h4>
+                </div>
+            {{/if}}
         </div>
+       
     </main>
 
 </body>

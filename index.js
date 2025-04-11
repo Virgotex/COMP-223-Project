@@ -19,6 +19,7 @@ app.use(
 );
 
 app.use(express.static(path.join(__dirname + "/public/")))
+app.set('view engine', 'hbs')
 let pages_root = path.join(__dirname + "/pages/");
 app.get("/shop", (req,res) => {
     if(!req.session.isLoggedIn){
@@ -27,10 +28,10 @@ app.get("/shop", (req,res) => {
     res.sendFile(path.join(pages_root + "shop.html"))
 })
 app.get("/login", async (req,res) => {
-    res.sendFile(path.join(pages_root + "login.html"))
+    res.render("login")
 })
 app.get("/signup", (req,res) => {
-    res.sendFile(path.join(pages_root + "signup.html"))
+    res.render("signup")
 })
 app.get("/cart", (req,res) => {
     res.sendFile(path.join(pages_root + "cart.html"))
@@ -49,13 +50,30 @@ app.get("/" , (req,res) => {
 })
 app.post("/login", async (req,res)=>{
     console.log(req.body)
+    let pass_recv = req.body.password
     const user = await prisma.user.findUnique({
         where: {
             email: req.body.email
         }
     })
-    req.session.isLoggedIn = true;
-    res.redirect("shop")
+    if(!user){
+        //req.session.isLoggedIn = false;
+        res.render("login",{
+            message: "Account not found!"
+        })
+        return;
+    }
+    const passwordMatch = await bcrypt.compare(pass_recv, user.password);
+    if(passwordMatch){
+        req.session.isLoggedIn = true;
+        res.redirect("shop")
+    }
+    else{
+        console.log("incorrect!")
+        res.render("login",{
+            message:"incorrect password"
+        })
+    }
 })
 app.post("/signup", async (req,res) => {
     let salt = await bcrypt.genSalt(10);
@@ -66,7 +84,7 @@ app.post("/signup", async (req,res) => {
         }
     })
     if(user != null){
-        console.log("User exists!");     
+        res.render("signup", { message :"User already  exists!"});     
         req.session.isLoggedIn = false; 
         return;
     }

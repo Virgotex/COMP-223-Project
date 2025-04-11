@@ -22,7 +22,8 @@
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
-    "express-session": "^1.18.1"
+    "express-session": "^1.18.1",
+    "hbs": "^4.2.0"
   },
   "devDependencies": {
     "prisma": "^6.6.0"

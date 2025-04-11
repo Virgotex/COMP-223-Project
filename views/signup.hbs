@@ -38,7 +38,13 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password"required>
                 </div>
-                <button type="submit" class="signup-btn">Create Account</button> </form>
+                <button type="submit" class="signup-btn">Create Account</button> 
+                {{#if message }}
+                <div class="error">
+                    <h1>{{message}}</h4>
+                </div>
+                {{/if}}
+                </form>
         </div>
     </main>
 
