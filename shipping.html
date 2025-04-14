@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Details - Checkout</title>
+    <link rel="stylesheet" href="public/css/shipping.css">
+</head>
+<script src="public/scripts/script.js"></script>
+
+<body>
+
+    <div class="page-container">
+        <header class="app-header">
+            <div class="logo-placeholder">
+                </div>
+            <div class="search-container">
+              <input type="search" placeholder="Search..." aria-label="Search" />
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+              <a href="home.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="shop.html">Shop</a>
+              <a href="help.html">Help</a>
+            </nav>
+            <button class="cart-button" type="button" onclick="cart()">
+              <span class="cart-icon-placeholder">[🛒]</span> Your Cart
+            </button>
+        </header>
+
+        <nav class="checkout-steps">
+            <span>1. Shopping Cart</span>
+            <span class="active">2. Shipping Details</span>
+            <span>3. Payment Options</span>
+        </nav>
+
+        <main class="checkout-main">
+
+            <section class="shipping-details">
+                <h2>Shipping Details</h2>
+                <form id="shipping-form">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="firstName" />
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="lastName" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address2">Address 2</label>
+                        <input type="text" id="address2" name="address2" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">County</label>
+                            <select id="country" name="country">
+                                <option value="" disabled selected>Select County</option>
+                                <option value="">Uasin Gishu</option>
+                                <option value="">Nairobi</option>
+                                <option value="">Kisumu</option>
+                                <option value="">Nakuru</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zip-code">Zip/Postal Code</label>
+                            <input type="text" id="zip-code" name="zipCode" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" name="phoneNumber" />
+                        </div>
+                    </div>
+
+                    <div class="shipping-options">
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping" value="free" checked> <div class="option-details">
+                                <strong>Free Shipping</strong>
+                                <span>Between 2 - 5 working days</span>
+                            </div>
+                        </label>
+                        <label class="shipping-option">
+                            <input type="radio" name="shipping" value="next-day">
+                            <div class="option-details">
+                                <strong>Next Day Delivery - KES 20</strong>
+                                <span>24 hours from checkout</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button"class="btn btn-primary" onclick="payment()">Next</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="order-summary">
+                <h2>Summary</h2>
+                <div class="summary-items">
+                    <div class="summary-item">
+                        <div class="item-image-placeholder"></div>
+                        <div class="item-info">
+                            <span>PRODUCT NAME</span>
+                        </div>
+                        <span class="item-price">KES 300</span>
+                    </div>
+                    <div class="summary-item">
+                        <div class="item-image-placeholder"></div>
+                        <div class="item-info">
+                            <span>PRODUCT NAME</span>
+                        </div>
+                        <span class="item-price">KES 300</span>
+                    </div>
+                </div>
+
+                <div class="voucher-section">
+                    <button class="voucher-toggle">HAVE A VOUCHER?</button>
+                </div>
+
+                <div class="summary-totals">
+                    <div class="total-row">
+                        <span>SUBTOTAL</span>
+                        <span>$600</span>
+                    </div>
+                    <div class="total-row">
+                        <span>SHIPPING</span>
+                        <span>FREE</span> </div>
+                    <div class="total-row">
+                        <span>TAXES</span>
+                        <span>KES 13</span>
+                    </div>
+                    <hr />
+                    <div class="total-row grand-total">
+                        <span>TOTAL</span>
+                        <span>KES 613</span> </div>
+                </div>
+            </aside>
+
+        </main> </div> </body>
+</html>

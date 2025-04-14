@@ -1,0 +1,283 @@
+/* === Global Styles === */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.5;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Removed background/shadow - apply to specific elements if needed */
+}
+
+/* === Header Styles === */
+.app-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 20px;
+    background-color: #fff; /* Give header white background */
+    padding-left: 20px; /* Add padding consistent with page-container */
+    padding-right: 20px;
+}
+
+.logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.search-container {
+    flex-grow: 0;
+    flex-basis: 250px;
+}
+
+.search-container input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+.main-nav a:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.cart-button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.cart-icon-placeholder {
+    font-size: 1.1em;
+}
+
+/* === Checkout Steps Styles === */
+.checkout-steps {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 30px 0; /* Adjusted margin */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff; /* Give steps white background */
+    padding-top: 15px; /* Add padding */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.checkout-steps span {
+    color: #888;
+    padding-bottom: 5px;
+}
+
+.checkout-steps span.active {
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+/* === Main Layout Styles === */
+.checkout-main {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 40px;
+    background-color: #fff; /* White background for main content area */
+    padding: 20px; /* Padding inside main area */
+}
+
+.payment-method-section {
+    flex: 2; /* Takes more space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.order-summary {
+    flex: 1; /* Takes less space */
+    min-width: 280px; /* Minimum width before wrapping */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    height: fit-content; /* Make it only as tall as needed */
+}
+
+/* === Section Heading Styles === */
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 500; /* Slightly less bold */
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* === Payment Method Styles === */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-option {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+/* Basic styling for when checked (can be enhanced with JS) */
+.payment-option input[type="radio"]:checked + .option-details {
+    /* No default visual change without JS toggle, but border can be added to parent */
+}
+.payment-option:has(input[type="radio"]:checked) {
+    border-color: #333;
+    background-color: #fdfdfd;
+}
+
+.payment-option input[type="radio"] {
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+.option-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.option-details strong {
+    font-weight: 600; /* Semibold */
+}
+.option-description {
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.4;
+}
+
+.credit-card-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* NOTE: To hide/show this dynamically, add/remove a 'hidden' class with JS */
+    /* .hidden { display: none; } */
+}
+
+/* Shared Form Styles */
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+.form-group input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-with-icon input {
+    padding-right: 30px;
+}
+.input-icon {
+    position: absolute;
+    right: 10px;
+    color: #888;
+}
+
+/* Card Specific Layout */
+.card-details-row .card-number-group { flex-grow: 3; min-width: 150px; }
+.card-details-row .expiry-group { flex-grow: 1; min-width: 80px;}
+.card-details-row .cvv-group { flex-grow: 1; min-width: 60px;}
+
+/* PayPal Specific Styles */
+.paypal-option {
+    justify-content: space-between;
+    align-items: center;
+}
+.paypal-logo-placeholder {
+    font-weight: bold;
+    color: #003087;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    flex-shrink: 0;
+}
+
+/* === Form Actions === */
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+.btn-primary { background-color: #333; color: white; }
+.btn-secondary { background-color: #e0e0e0; color: #333; }
+
+/* === Summary Styles === */
+.summary-items { display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px; }
+.summary-item { display: flex; align-items: center; gap: 15px; }
+.item-image-placeholder { width: 60px; height: 60px; background-color: #e0e0e0; border: 1px solid #ccc; border-radius: 4px; flex-shrink: 0; }
+.item-info { flex-grow: 1; font-size: 0.95em; }
+.item-price { font-weight: 600; } /* Semibold */
+.voucher-section { margin-bottom: 20px; }
+.voucher-toggle { background: none; border: none; color: #007bff; cursor: pointer; padding: 5px 0; text-align: left; width: 100%; border-bottom: 1px dashed #ccc; font-size: 0.95em; }
+.summary-totals { display: flex; flex-direction: column; gap: 10px; }
+.total-row { display: flex; justify-content: space-between; font-size: 0.95em; color: #555; }
+.total-row.grand-total { font-size: 1.1em; font-weight: 600; color: #333; margin-top: 10px; padding-top: 10px; }
+hr { border: none; border-top: 1px solid #ccc; margin: 10px 0; }
