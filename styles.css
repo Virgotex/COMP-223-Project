@@ -505,6 +505,78 @@ footer .footer-bottom {
     line-height: 1.7;
 }
 
+/* Cart Layout Styles */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Shopping Cart takes 2/3, Summary takes 1/3 */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.shopping-cart {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.summary h2 {
+    margin-bottom: 20px;
+}
+
+.summary-item, .summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.coupon-code {
+    margin-top: 20px;
+}
+
+.coupon-code input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons .next-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .cancel-btn {
+    background-color: #ddd;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
