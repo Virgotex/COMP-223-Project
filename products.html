@@ -6,153 +6,155 @@
     <title>Product Details</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script src="public/scripts/script.js"></script>
 <body>
-     <div class="page-container">
+    <div class="page-container">
         <header class="app-header">
             <div class="logo-placeholder">
                 <img src="public/images/Thrift Lab.png" />
-                </div>
+            </div>
             <div class="search-container">
-              <input type="search" placeholder="Search..." aria-label="Search" />
+                <input type="search" placeholder="Search..." aria-label="Search" />
             </div>
             <nav class="main-nav" aria-label="Main navigation">
-              <a href="home.html">Home</a>
-              <a href="shop.html">Shop</a>
-              <a href="index.html">Login</a>
+                <a href="home.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html">Login</a>
             </nav>
             <button class="cart-button" type="button" onclick="cart()">
-              <span class="cart-icon-placeholder">[🛒]</span> Your Cart
+                <span class="cart-icon-placeholder">[🛒]</span> Your Cart
             </button>
         </header>
 
-    <main class="container">
-        <section class="product-details">
-            <div class="product-images">
-                <div class="main-image">
-                    <img src="placeholder-image.jpg" alt="Product Main Image">
+        <main class="container">
+            <section class="product-details">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="placeholder-image.jpg" alt="Product Main Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="placeholder-image.jpg" alt="Product Thumbnail 1">
+                        <img src="placeholder-image.jpg" alt="Product Thumbnail 2">
+                        <img src="placeholder-image.jpg" alt="Product Thumbnail 3">
+                    </div>
                 </div>
-                <div class="thumbnail-images">
-                    <img src="placeholder-image.jpg" alt="Product Thumbnail 1">
-                    <img src="placeholder-image.jpg" alt="Product Thumbnail 2">
-                    <img src="placeholder-image.jpg" alt="Product Thumbnail 3">
+                <div class="product-info">
+                    <h1 class="product-title">Product Title</h1>
+                    <p class="product-rating">★★★★☆ 4 Reviews</p>
+                    <p class="product-price">$123.00</p>
+                    <div class="product-options">
+                        <label for="size">Size:</label>
+                        <select id="size">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </div>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">Add to Wishlist</button>
+                    </div>
                 </div>
-            </div>
-            <div class="product-info">
-                <h1 class="product-title">Product Title</h1>
-                <p class="product-rating">★★★★☆ 4 Reviews</p>
-                <p class="product-price">$123.00</p>
-                <div class="product-options">
-                    <label for="size">Size:</label>
-                    <select id="size">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                    </select>
-                </div>
-                <p class="product-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div class="product-buttons">
-                    <button class="add-to-cart">Add to Cart</button>
-                    <button class="add-to-wishlist">Add to Wishlist</button>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="similar-products">
-            <h2>Similar Products</h2>
-            <div class="similar-products-grid">
-                <div class="product-card">
-                    <a href="products.html">
-                        <img src="placeholder-image.jpg" alt="Similar Product 1">
-                        <h3>Similar Product 1</h3>
-                        <p class="rating">★★★☆☆</p>
-                        <p class="price">$99.00</p>
-                    </a>
+            <section class="similar-products">
+                <h2>Similar Products</h2>
+                <div class="similar-products-grid">
+                    <div class="product-card">
+                        <a href="products.html">
+                            <img src="placeholder-image.jpg" alt="Similar Product 1">
+                            <h3>Similar Product 1</h3>
+                            <p class="rating">★★★☆☆</p>
+                            <p class="price">$99.00</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="products.html">
+                            <img src="placeholder-image.jpg" alt="Similar Product 2">
+                            <h3>Similar Product 2</h3>
+                            <p class="rating">★★★★☆</p>
+                            <p class="price">$149.00</p>
+                        </a>
+                    </div>
+                    <div class="product-card">
+                        <a href="products.html">
+                            <img src="placeholder-image.jpg" alt="Similar Product 3">
+                            <h3>Similar Product 3</h3>
+                            <p class="rating">★★★★★</p>
+                            <p class="price">$199.00</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="product-card">
-                     <a href="products.html">
-                        <img src="placeholder-image.jpg" alt="Similar Product 2">
-                        <h3>Similar Product 2</h3>
-                        <p class="rating">★★★★☆</p>
-                        <p class="price">$149.00</p>
-                    </a>
-                </div>
-                 <div class="product-card">
-                     <a href="products.html">
-                        <img src="placeholder-image.jpg" alt="Similar Product 3">
-                        <h3>Similar Product 3</h3>
+            </section>
+
+            <section class="product-reviews">
+                <h2>Customer Reviews</h2>
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <p class="name">John Doe</p>
+                        <p class="date">2024-07-28</p>
+                    </div>
+                    <div class="review-content">
                         <p class="rating">★★★★★</p>
-                        <p class="price">$199.00</p>
-                    </a>
+                        <p>Excellent product! I highly recommend it.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <p class="name">Jane Smith</p>
+                        <p class="date">2024-07-25</p>
+                    </div>
+                    <div class="review-content">
+                        <p class="rating">★★★★☆</p>
+                        <p>Good product, but the shipping was a bit slow.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <section class="product-reviews">
-            <h2>Customer Reviews</h2>
-            <div class="review-item">
-                <div class="reviewer-info">
-                    <p class="name">John Doe</p>
-                    <p class="date">2024-07-28</p>
+        <footer>
+            <div class="footer-columns container">
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>Address: 123 Main Street, City, Country</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Email: info@example.com</p>
                 </div>
-                <div class="review-content">
-                    <p class="rating">★★★★★</p>
-                    <p>Excellent product!  I highly recommend it.</p>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Category 1</a></li>
+                        <li><a href="#">Category 2</a></li>
+                        <li><a href="#">Category 3</a></li>
+                        <li><a href="#">Category 4</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="review-item">
-                <div class="reviewer-info">
-                    <p class="name">Jane Smith</p>
-                    <p class="date">2024-07-25</p>
-                </div>
-                <div class="review-content">
-                    <p class="rating">★★★★☆</p>
-                    <p>Good product, but the shipping was a bit slow.</p>
-                </div>
+            <div class="footer-bottom container">
+                <p>&copy; 2025 E-commerce Store. All rights reserved.</p>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-columns container">
-            <div>
-                <h4>Contact Us</h4>
-                <p>Address: 123 Main Street, City, Country</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Email: info@example.com</p>
-            </div>
-            <div>
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="products.html">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="#">Category 1</a></li>
-                    <li><a href="#">Category 2</a></li>
-                    <li><a href="#">Category 3</a></li>
-                    <li><a href="#">Category 4</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2025 Pica. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
