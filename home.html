@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="public/css/shipping.css">
 </head>
+<script src="./public/scripts/script.js"></script>
 <body>
-    <header class="container">
-        <div class="logo">Logo</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="products.html">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="cart">
-            <a href="#">Cart</a>
-        </div>
-    </header>
+      <div class="page-container">
+        <header class="app-header">
+            <div class="logo-placeholder">
+                <img src="public/images/Thrift Lab.png" />
+                </div>
+            <div class="search-container">
+              <input type="search" placeholder="Search..." aria-label="Search" />
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+              <a href="home.html">Home</a>
+              <a href="shop.html">Shop</a>
+              <a href="index.html">login</a>
+            </nav>
+            <button class="cart-button" type="button" onclick="cart()">
+              <span class="cart-icon-placeholder">[🛒]</span> Your Cart
+            </button>
+        </header>
 
     <main class="container">
         <section class="hero-section">
