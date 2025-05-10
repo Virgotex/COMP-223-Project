@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
 }
 
-header {
+     header {
     display: flex;
     justify-content: space-between;
     align-items: center;

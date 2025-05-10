@@ -19,6 +19,13 @@ body {
     padding: 20px;
 }
 
+.logo {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    margin: 20px auto 20px;
+}
+
 .form-container {
     background: #fff;
     padding: 30px;
@@ -98,4 +105,3 @@ h1 {
         padding: 20px;
     }
 }
-
