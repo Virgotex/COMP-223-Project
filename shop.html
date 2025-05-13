@@ -6,9 +6,199 @@
     <title>E-commerce Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="public/css/shipping.css">
-    
+    <style>
+        body {
+            font-family: sans-serif; /* Changed to system sans-serif */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-placeholder img {
+            height: 50px;
+        }
+        .search-container {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .search-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .main-nav {
+            display: flex;
+            gap: 15px;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .cart-button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .category-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        .promo-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .promo-section div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .ongoing-sale h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .bestselling h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .other-offer span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .offer-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .inspiration {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .inspiration-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .inspiration-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .recommended {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .recommended-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product-info {
+            margin-top: 10px;
+        }
+        .product-name {
+            font-weight: 600;
+        }
+        .product-price {
+            color: #007bff;
+            margin-top: 5px;
+        }
+        .product-rating {
+            margin-top: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        footer img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        footer ul li {
+            margin-bottom: 5px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .promo-section {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
 </head>
-<script src="public/scripts/script.js"></script>
 <body>
    <div class="page-container">
         <header class="app-header">
@@ -101,39 +291,78 @@
                     <img src="placeholder-image.png" alt="Product">
                     <div class="product-info">
                         <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">KES 300</div>
-                        <div>***</div>
+                        <div class="product-price">$300</div>
+                        <div class="product-rating">★★★☆☆</div>
                     </div>
                 </div>
                 <div class="product-card">
                     <img src="placeholder-image.png" alt="Product">
                     <div class="product-info">
                         <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">KES 300</div>
-                        <div>***</div>
+                        <div class="product-price">$300</div>
+                        <div class="product-rating">★★★☆☆</div>
                     </div>
                 </div>
                 <div class="product-card">
                     <img src="placeholder-image.png" alt="Product">
                     <div class="product-info">
                         <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">KES 300</div>
-                        <div>***</div>
+                        <div class="product-price">$300</div>
+                        <div class="product-rating">★★★☆☆</div>
                     </div>
                 </div>
                 <div class="product-card">
                     <img src="placeholder-image.png" alt="Product">
                     <div class="product-info">
                         <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">KES 300</div>
-                        <div>***</div>
+                        <div class="product-price">$300</div>
+                        <div class="product-rating">★★★☆☆</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2025 Thrift Store</p>
+            <div class="footer-columns container">
+                <div>
+                    <img src="placeholder-image.png" alt="Company Logo">
+                    <p>1717 Harrison St, San Francisco, CA 94103, USA</p>
+                    <p>&copy; Your Company Name</p>
+                </div>
+                <div>
+                    <h4>Main Menu</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">The Company</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="#">The Team</a></li>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Brand Motto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Find Us On</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">X / Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
