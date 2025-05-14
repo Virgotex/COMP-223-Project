@@ -66,6 +66,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 120px;
+    padding: 15px;    /* space around the photo */
+}
+
+/* give images some breathing room */
+.category-item img,
+.inspiration-item img,
+.product-card img {
+    display: block;
+    margin: 0 auto 10px;  /* center and add bottom gap */
 }
 
 /* promo-section: 2-column grid (wide + narrow), then full-width row */
