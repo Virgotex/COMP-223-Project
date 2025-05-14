@@ -9,165 +9,165 @@
 </head>
 <body>
    <div class="page-container">
-        <header class="app-header">
+        <header class="app-header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #f8f8f8;">
             <div class="logo-placeholder">
-                <img src="public/images/Thrift Lab.png" />
+                <img src="public/images/Thrift Lab.png" style="height: 50px;" />
                 </div>
-            <div class="search-container">
-              <input type="search" placeholder="Search..." aria-label="Search" />
+            <div class="search-container" style="flex-grow: 1; margin: 0 20px; display: flex;">
+              <input type="search" placeholder="Search..." aria-label="Search" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;" />
             </div>
-            <nav class="main-nav" aria-label="Main navigation">
-              <a href="home.html">Home</a>
-              <a href="shop.html">Shop</a>
-              <a href="index.html">Login</a>
+            <nav class="main-nav" aria-label="Main navigation" style="display: flex; gap: 15px;">
+              <a href="home.html" style="text-decoration: none; color: #333;">Home</a>
+              <a href="shop.html" style="text-decoration: none; color: #333;">Shop</a>
+              <a href="index.html" style="text-decoration: none; color: #333;">Login</a>
             </nav>
-            <button class="cart-button" type="button" onclick="cart()">
+            <button class="cart-button" type="button" onclick="cart()" style="background-color: #f0f0f0; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
               <span class="cart-icon-placeholder">[🛒]</span> Your Cart
             </button>
         </header>
 
-        <section class="categories">
-            <div class="category-item">
-                <img src="placeholder-image.png" alt="Category">
-                <span>CATEGORY</span>
+        <section class="categories" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; padding: 20px;">
+            <div class="category-item" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="placeholder-image.png" alt="Category" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="margin-top: 5px;">CATEGORY</span>
             </div>
-            <div class="category-item">
-                <img src="placeholder-image.png" alt="Category">
-                <span>CATEGORY</span>
+            <div class="category-item" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="placeholder-image.png" alt="Category" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="margin-top: 5px;">CATEGORY</span>
             </div>
-            <div class="category-item">
-                <img src="placeholder-image.png" alt="Category">
-                <span>CATEGORY</span>
+            <div class="category-item" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="placeholder-image.png" alt="Category" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="margin-top: 5px;">CATEGORY</span>
             </div>
-            <div class="category-item">
-                <img src="placeholder-image.png" alt="Category">
-                <span>CATEGORY</span>
+            <div class="category-item" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="placeholder-image.png" alt="Category" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="margin-top: 5px;">CATEGORY</span>
             </div>
-            <div class="category-item">
-                <img src="placeholder-image.png" alt="Category">
-                <span>CATEGORY</span>
+            <div class="category-item" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="placeholder-image.png" alt="Category" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="margin-top: 5px;">CATEGORY</span>
             </div>
-            <div class="category-item">
-                <img src="placeholder-image.png" alt="Category">
-                <span>CATEGORY</span>
-            </div>
-        </section>
-
-        <section class="promo-section">
-            <div class="ongoing-sale">
-                <h2>Ongoing SALE. 50% OFF.</h2>
-                <button>Browse products</button>
-            </div>
-            <div class="bestselling">
-                <h2>Bestselling products</h2>
-                <button>Explore</button>
-            </div>
-            <div class="other-offer">
-                <span>Other offer</span>
-                <img src="placeholder-image.png" alt="Offer Image" class="offer-image">
-                <button>Read more</button>
+            <div class="category-item" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="placeholder-image.png" alt="Category" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="margin-top: 5px;">CATEGORY</span>
             </div>
         </section>
 
-        <section class="inspiration">
-            <h2>Inspiration</h2>
-            <p>Discover unique pieces that bring creativity and style into your everyday life.</p>
-            <div class="inspiration-items">
+        <section class="promo-section" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; padding: 20px;">
+            <div class="ongoing-sale" style="padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                <h2 style="font-size: 1rem;">Ongoing SALE. 50% OFF.</h2>
+                <button style="padding: 8px 15px; border: none; border-radius: 4px; background-color: #4CAF50; color: white; cursor: pointer;">Browse products</button>
+            </div>
+            <div class="bestselling" style="padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                <h2 style="font-size: 1rem;">Bestselling products</h2>
+                <button style="padding: 8px 15px; border: none; border-radius: 4px; background-color: #4CAF50; color: white; cursor: pointer;">Explore</button>
+            </div>
+            <div class="other-offer" style="padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                <span style="display: block; margin-bottom: 5px;">Other offer</span>
+                <img src="placeholder-image.png" alt="Offer Image" class="offer-image" style="width: 100%; height: auto; border-radius: 4px;">
+                <button style="margin-top: 10px; padding: 8px 15px; border: none; border-radius: 4px; background-color: #008CBA; color: white; cursor: pointer;">Read more</button>
+            </div>
+        </section>
+
+        <section class="inspiration" style="padding: 20px; text-align: center;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 10px;">Inspiration</h2>
+            <p style="color: #555; margin-bottom: 20px;">Discover unique pieces that bring creativity and style into your everyday life.</p>
+            <div class="inspiration-items" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 10px;">
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="placeholder-image.png" alt="Inspiration" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
                 </div>
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="placeholder-image.png" alt="Inspiration" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
                 </div>
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="placeholder-image.png" alt="Inspiration" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
                 </div>
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="placeholder-image.png" alt="Inspiration" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
                 </div>
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="placeholder-image.png" alt="Inspiration" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
                 </div>
             </div>
         </section>
-        <hr>
+        <hr style="border: 1px solid #ddd; margin: 20px 0;">
 
-        <section class="recommended">
-            <h2>Recommended products</h2>
-            <p>Explore our top selections chosen for their exceptional quality and customer satisfaction.</p>
-            <div class="recommended-items">
-                <div class="product-card">
-                    <img src="placeholder-image.png" alt="Product">
-                    <div class="product-info">
-                        <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">$300</div>
-                        <div class="product-rating">★★★☆☆</div>
+        <section class="recommended" style="padding: 20px; text-align: center;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 10px;">Recommended products</h2>
+            <p style="color: #555; margin-bottom: 20px;">Explore our top selections chosen for their exceptional quality and customer satisfaction.</p>
+            <div class="recommended-items" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 10px;">
+                <div class="product-card" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px;">
+                    <img src="placeholder-image.png" alt="Product" style="width: 100%; height: auto;">
+                    <div class="product-info" style="margin-top: 10px;">
+                        <div class="product-name" style="font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 5px;">PRODUCT NAME</div>
+                        <div class="product-price" style="font-size: 1.1rem; color: #218838; margin-bottom: 5px;">$300</div>
+                        <div class="product-rating" style="color: #888;">★★★☆☆</div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="placeholder-image.png" alt="Product">
-                    <div class="product-info">
-                        <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">$300</div>
-                        <div class="product-rating">★★★☆☆</div>
+                <div class="product-card" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px;">
+                    <img src="placeholder-image.png" alt="Product" style="width: 100%; height: auto;">
+                    <div class="product-info" style="margin-top: 10px;">
+                        <div class="product-name" style="font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 5px;">PRODUCT NAME</div>
+                        <div class="product-price" style="font-size: 1.1rem; color: #218838; margin-bottom: 5px;">$300</div>
+                        <div class="product-rating" style="color: #888;">★★★☆☆</div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="placeholder-image.png" alt="Product">
-                    <div class="product-info">
-                        <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">$300</div>
-                        <div class="product-rating">★★★☆☆</div>
+                <div class="product-card" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px;">
+                    <img src="placeholder-image.png" alt="Product" style="width: 100%; height: auto;">
+                    <div class="product-info" style="margin-top: 10px;">
+                        <div class="product-name" style="font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 5px;">PRODUCT NAME</div>
+                        <div class="product-price" style="font-size: 1.1rem; color: #218838; margin-bottom: 5px;">$300</div>
+                        <div class="product-rating" style="color: #888;">★★★☆☆</div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="placeholder-image.png" alt="Product">
-                    <div class="product-info">
-                        <div class="product-name">PRODUCT NAME</div>
-                        <div class="product-price">$300</div>
-                        <div class="product-rating">★★★☆☆</div>
+                <div class="product-card" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px;">
+                    <img src="placeholder-image.png" alt="Product" style="width: 100%; height: auto;">
+                    <div class="product-info" style="margin-top: 10px;">
+                        <div class="product-name" style="font-size: 1.2rem; font-weight: bold; color: #333; margin-bottom: 5px;">PRODUCT NAME</div>
+                        <div class="product-price" style="font-size: 1.1rem; color: #218838; margin-bottom: 5px;">$300</div>
+                        <div class="product-rating" style="color: #888;">★★★☆☆</div>
                     </div>
                 </div>
             </div>
         </section>
-        <hr>
+        <hr style="border: 1px solid #ddd; margin: 20px 0;">
 
-        <footer>
-             <div class="footer-columns container">
+        <footer style="background-color: #f0f0f0; padding: 20px 0; margin-top: 20px;">
+             <div class="footer-columns container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto;">
                 <div>
-                    <h4>Contact Us</h4>
-                    <p>Address: 123 Main Street, City, Country</p>
-                    <p>Phone: +123 456 7890</p>
-                    <p>Email: info@example.com</p>
+                    <h4 style="font-size: 1.2em; margin-bottom: 10px;">Contact Us</h4>
+                    <p style="margin-bottom: 5px;">Address: 123 Main Street, City, Country</p>
+                    <p style="margin-bottom: 5px;">Phone: +123 456 7890</p>
+                    <p style="margin-bottom: 5px;">Email: info@example.com</p>
                 </div>
                 <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="products.html">Shop</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <h4 style="font-size: 1.2em; margin-bottom: 10px;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="home.html"  style="text-decoration: none; color: #333;">Home</a></li>
+                        <li style="margin-bottom: 5px;"><a href="products.html"  style="text-decoration: none; color: #333;">Shop</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">About</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Categories</h4>
-                    <ul>
-                        <li><a href="#">Category 1</a></li>
-                        <li><a href="#">Category 2</a></li>
-                        <li><a href="#">Category 3</a></li>
-                        <li><a href="#">Category 4</a></li>
+                    <h4 style="font-size: 1.2em; margin-bottom: 10px;">Categories</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Category 1</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Category 2</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Category 3</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Category 4</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
+                    <h4 style="font-size: 1.2em; margin-bottom: 10px;">Follow Us</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Facebook</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Twitter</a></li>
+                        <li style="margin-bottom: 5px;"><a href="#"  style="text-decoration: none; color: #333;">Instagram</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom container">
+            <div class="footer-bottom container" style="text-align: center; margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; max-width: 1200px; margin: 0 auto;">
                 <p>&copy; 2024 E-commerce Shop. All rights reserved.</p>
             </div>
 
@@ -175,4 +175,5 @@
     </div>
 </body>
 </html>
+
 
