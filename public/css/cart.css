@@ -137,13 +137,11 @@ body.cart-page {
     border-radius: 5px;
     cursor: pointer;
 }
+/* drop explicit overrides—use .btn-* instead */
 .next-btn {
-    background-color: #007bff;
-    color: #fff;
 }
+
 .cancel-btn {
-    background-color: #f0f0f0;
-    color: #333;
 }
 .summary {
     flex: 1;
@@ -255,9 +253,13 @@ footer a {
     background: none;      /* no background */
     border: none;          /* no border */
     border-radius: 0;      /* no rounding */
-    color: inherit;
+    color: #000;          /* force black text as in payment page */
     text-decoration: none;
     font-weight: normal;
+    white-space: nowrap;  /* keep each step on a single line */
+    cursor: pointer;      /* make anchors clickable */
+    font-family: inherit; /* inherit the font family from payment.css */
+    font-size: inherit;   /* inherit font size as well */
 }
 
 .checkout-steps span.active {
