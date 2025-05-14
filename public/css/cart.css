@@ -1,5 +1,4 @@
 body.cart-page {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -48,22 +47,6 @@ body.cart-page {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-.steps {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.steps span {
-    padding: 10px 20px;
-    background-color: #ddd;
-    border-radius: 5px;
-    margin: 0 10px;
-}
-.steps span.active {
-    background-color: #007bff;
-    color: #fff;
 }
 .main-content {
     display: flex;
@@ -262,4 +245,25 @@ footer a {
         margin-bottom: 10px;
         margin-right: 0;
     }
+}
+
+/* Add checkout-steps styling */
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.checkout-steps a,
+.checkout-steps span {
+    padding: 10px 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.checkout-steps span.active {
+    background-color: #007bff;
+    color: #fff;
 }
