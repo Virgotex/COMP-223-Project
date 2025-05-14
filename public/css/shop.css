@@ -49,52 +49,68 @@ body {
     align-items: center;
     gap: 5px;
 }
+/* categories: simple bordered cards, no shadow */
 .categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 .category-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: none;   /* remove previous shadow */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 120px;
 }
-.category-item img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
+
+/* promo-section: 2-column grid (wide + narrow), then full-width row */
 .promo-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "ongoing bestselling"
+        "other other";
     gap: 20px;
     margin-top: 20px;
 }
-.promo-section div {
-    background-color: #fff;
+.ongoing-sale {
+    grid-area: ongoing;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bestselling {
+    grid-area: bestselling;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.ongoing-sale h2,
-.bestselling h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.other-offer {
+    grid-area: other;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.other-offer span {
-    display: block;
-    margin-bottom: 10px;
-}
-.offer-image {
-    width: 100%;
+.other-offer .offer-image {
+    max-width: 150px;
     height: auto;
-    border-radius: 5px;
+    margin-right: 20px;
 }
 .inspiration {
     margin-top: 20px;
@@ -173,6 +189,14 @@ footer ul li {
 footer a {
     color: #fff;
     text-decoration: none;
+}
+/* Footer bottom styling (match cart.html) */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;      /* preserve top spacing and center */
+    padding: 20px 20px 0;     /* top padding and horizontal insets */
+    border-top: 1px solid #555;
+    text-align: center;
 }
 @media (max-width: 768px) {
     .promo-section {
