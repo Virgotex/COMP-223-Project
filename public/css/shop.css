@@ -9,13 +9,14 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+/* === Header === */
 .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
 }
 .logo-placeholder img {
     height: 50px;
@@ -25,10 +26,11 @@ body {
     margin: 0 20px;
 }
 .search-container input {
-    width: 100%;
-    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    padding: 8px 16px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 .main-nav {
     display: flex;
@@ -38,6 +40,14 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    padding: 0 10px;
+    position: relative;
+}
+.main-nav a:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    color: #ccc;
 }
 .cart-button {
     background-color: #f0f0f0;
@@ -49,24 +59,26 @@ body {
     align-items: center;
     gap: 5px;
 }
-/* categories: simple bordered cards, no shadow */
+/* === Categories === */
 .categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin: 30px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }
 .category-item {
-    background-color: #fff;
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: none;   /* remove previous shadow */
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 120px;
-    padding: 15px;    /* space around the photo */
 }
 
 /* give images some breathing room */
@@ -77,21 +89,28 @@ body {
     margin: 0 auto 10px;  /* center and add bottom gap */
 }
 
-/* promo-section: 2-column grid (wide + narrow), then full-width row */
+/* === Promo Section === */
 .promo-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas:
-        "ongoing bestselling"
-        "other other";
     gap: 20px;
+    margin-bottom: 30px;
     margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }
-.ongoing-sale {
-    grid-area: ongoing;
+.promo-section,
+.promo-section .ongoing-sale,
+.promo-section .bestselling,
+.promo-section .other-offer {
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
+}
+.ongoing-sale {
+    grid-area: ongoing;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,9 +118,6 @@ body {
 }
 .bestselling {
     grid-area: bestselling;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,9 +125,6 @@ body {
 }
 .other-offer {
     grid-area: other;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -124,6 +137,10 @@ body {
 .inspiration {
     margin-top: 20px;
     text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .inspiration-items {
     display: grid;
@@ -140,6 +157,10 @@ body {
 .recommended {
     margin-top: 20px;
     text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .recommended-items {
     display: grid;
@@ -207,6 +228,48 @@ footer a {
     border-top: 1px solid #555;
     text-align: center;
 }
+.footer-columns.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-columns.container h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #eee;
+}
+.footer-columns.container p,
+.footer-columns.container a {
+    color: #ddd;
+    text-decoration: none;
+}
+.footer-bottom.container {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 20px 20px 0;
+    border-top: 1px solid #555;
+    text-align: center;
+}
+
+/* wrap entire shop content in a white card */
+.card-layout {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin: 20px 0;
+}
+
+/* horizontal section dividers */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
 @media (max-width: 768px) {
     .promo-section {
         grid-template-columns: 1fr;
@@ -217,4 +280,129 @@ footer a {
     .hamburger {
         display: block;
     }
+}
+
+/* Adjusted header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+.logo-placeholder img {
+    height: 50px;
+}
+
+/* Search bar */
+.search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+}
+.search-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Nav links */
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Categories grid */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+.category-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Promo section */
+.promo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.promo-section div {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.ongoing-sale h2,
+.bestselling h2 {
+    font-size: 1rem;
+}
+
+/* Inspiration */
+.inspiration {
+    padding: 20px;
+    text-align: center;
+}
+.inspiration-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+.inspiration-items img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Recommended */
+.recommended {
+    padding: 20px;
+    text-align: center;
+}
+.recommended-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Footer (override payment.css if needed) */
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .categories { grid-template-columns: repeat(3, 1fr); }
+    .promo-section { grid-template-columns: 1fr; }
+    .inspiration-items { grid-template-columns: repeat(2, 1fr); }
+    .recommended-items { grid-template-columns: repeat(2, 1fr); }
+    .footer-columns { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+    .categories { grid-template-columns: 1fr; }
+    .inspiration-items, .recommended-items { grid-template-columns: 1fr; }
+    .footer-columns { grid-template-columns: 1fr; }
+    .app-header { flex-direction: column; text-align: center; }
+    .search-container { margin: 10px 0; }
 }
