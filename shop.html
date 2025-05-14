@@ -16,12 +16,14 @@
             <div class="search-container">
                 <input type="search" placeholder="Search…" aria-label="Search">
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Main navigation">
                 <a href="home.html">Home</a>
                 <a href="shop.html">Shop</a>
                 <a href="index.html">Login</a>
             </nav>
-            <button class="cart-button">🛒 Your Cart</button>
+            <button class="cart-button" type="button" onclick="cart()">
+                <span class="cart-icon-placeholder">[🛒]</span> Your Cart
+            </button>
         </header>
 
         <section class="categories">
