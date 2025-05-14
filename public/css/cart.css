@@ -266,3 +266,8 @@ footer a {
     font-weight: bold;
     text-decoration: underline;
 }
+
+/* force cart prices to match the payment page color */
+.item-price {
+    color: #000; /* match payment page price color */
+}
