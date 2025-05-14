@@ -1,0 +1,258 @@
+/* Product Details Layout */
+.product-details {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.product-images {
+    flex: 1;
+}
+.product-info {
+    flex: 1;
+}
+
+/* Main Image */
+.main-image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Thumbnails */
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.thumbnail-images img {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Info Panel */
+.product-title {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+.product-rating {
+    color: #ffc107;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.product-price {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0;
+}
+.product-options {
+    margin: 20px 0;
+}
+.product-options label {
+    font-weight: 500;
+    margin-right: 10px;
+}
+.product-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.product-buttons {
+    display: flex;
+    gap: 10px;
+}
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-to-wishlist {
+    background: none;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Similar Products */
+.similar-products {
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.similar-products h2 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+.similar-products-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.similar-products-grid .product-card {
+    flex: 0 0 auto;
+    width: 150px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.similar-products-grid .product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.similar-products-grid .product-card h3 {
+    font-size: 1em;
+    margin: 10px 0 5px;
+}
+.similar-products-grid .rating {
+    color: #ffc107;
+}
+
+/* Reviews */
+.product-reviews {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.product-reviews h2 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+.product-reviews .review-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.review-item .reviewer-info {
+    text-align: center;
+    flex-shrink: 0;
+}
+.reviewer-info .name {
+    font-weight: 600;
+    margin: 5px 0;
+}
+.reviewer-info .date {
+    color: #888;
+    font-size: 0.9em;
+}
+.review-content {
+    flex: 1;
+}
+.review-content .rating {
+    color: #ffc107;
+    margin-bottom: 5px;
+}
+
+/* Footer (reuse shipping.css footer styles) */
+
+/* page background */
+body {
+    background-color: #f4f4f4;
+}
+
+/* wrap main content */
+main.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* header bar */
+.app-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+.main-nav a {
+    color: #555;
+    padding: 0 10px;
+}
+.main-nav a:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+/* horizontal divider */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
+/* === Footer Styles (match payment.html) === */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-columns.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-columns.container h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.footer-columns.container p,
+.footer-columns.container a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-columns.container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columns.container ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom.container {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 20px 20px 0;
+    border-top: 1px solid #555;
+    text-align: center;
+}
