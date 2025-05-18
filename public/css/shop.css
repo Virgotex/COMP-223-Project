@@ -109,7 +109,8 @@ footer {
     padding: 0 20px;
 }
 .footer-columns.container h4 {
-    margin-bottom: 10px; color: #eee; font-size: 1.1em;
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 .footer-columns.container p,
 .footer-columns.container a {
