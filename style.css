@@ -61,10 +61,8 @@ a:hover {
 /* Adjusted search container for icon */
 .search-container {
     position: relative;
-    /* expand search area: grow twice as much and set sensible width bounds */
-    flex: 2 1 300px;
-    min-width: 250px;
-    max-width: 600px;
+    /* allow search to fill available navbar space */
+    flex: 1 1 auto;
     margin: 0 20px;
 }
 .search-container input {

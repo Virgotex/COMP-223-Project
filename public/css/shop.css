@@ -24,13 +24,13 @@ body {
     height: 40px;
 }
 .search-container {
-    flex-grow: 0;
-    flex-basis: 250px;
-    margin: 0;
+    flex: 1 1 auto;
+    margin: 0 20px;
 }
 .search-container input {
-    width: 100%; max-width: 400px;
-    padding: 8px 12px; border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
     border-radius: 20px;
 }
 .main-nav {
