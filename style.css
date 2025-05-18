@@ -166,6 +166,21 @@ button:hover,
     gap: 5px;
 }
 
+/* Account button styling */
+.account-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  margin: 0 10px;
+}
+.account-button i {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--brand-dark);
