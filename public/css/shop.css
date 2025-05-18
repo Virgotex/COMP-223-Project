@@ -24,13 +24,13 @@ body {
     height: 40px;
 }
 .search-container {
-    flex-grow: 0;
-    flex-basis: 250px;
-    margin: 0;
+    flex: 1 1 auto;
+    margin: 0 20px;
 }
 .search-container input {
-    width: 100%; max-width: 400px;
-    padding: 8px 12px; border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px 12px 8px 36px; /* ensure left padding for search icon */
+    border: 1px solid #ccc;
     border-radius: 20px;
 }
 .main-nav {
@@ -76,6 +76,21 @@ body {
 .category-item img {
     width: 100%; height: auto;
     border: 1px solid #ddd; border-radius: 5px;
+}
+
+.feature-banner {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.feature-banner img {
+  display: block;
+  width: 100%;
+  max-width: 1160px;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* === Promo Section === */

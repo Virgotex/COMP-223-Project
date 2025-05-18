@@ -6,25 +6,29 @@
     <title>E-commerce Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="public/css/shop.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
    <div class="page-container">
         <header class="app-header">
             <div class="logo-placeholder">
-                <img src="public/images/Thrift Lab.png" alt="Logo">
+                <img src="public/images/Thrift Lab.png" alt="Shop Logo" />
             </div>
             <div class="search-container">
-                <input type="search" placeholder="Search…" aria-label="Search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" placeholder="What are you looking for?" aria-label="Search" />
             </div>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="home.html">Home</a>
                 <a href="shop.html">Shop</a>
-                <a href="index.html">Login</a>
+                <a href="index.html" class="account-button">
+                    <i class="fas fa-user"></i>
+                    Account
+                </a>
             </nav>
-            <a href="cart.html" class="cart-button">
-                 <span class="cart-icon-placeholder">[🛒]</span> Your Cart
-            </a>
+            <button class="cart-button" type="button" onclick="cart()">
+                <i class="fas fa-shopping-cart"></i> Cart
+            </button>
         </header>
 
         <section class="promo-section">
@@ -43,6 +47,10 @@
             </div>
         </section>
 
+        <section class="feature-banner">
+            <img src="public/images/banner1.png" alt="Affordable Prices. Guaranteed Quality." class="feature-image">
+        </section>
+
         <section class="inspiration">
             <h2>Inspiration</h2>
             <p>Discover unique pieces that bring creativity and style into your everyday life.</p>
@@ -57,10 +65,10 @@
                     <img src="public/images/7.jpg" alt="Inspiration">
                 </div>
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="public/images/8.jpg" alt="Inspiration">
                 </div>
                 <div class="inspiration-item">
-                    <img src="placeholder-image.png" alt="Inspiration">
+                    <img src="public/images/5.jpg" alt="Inspiration">
                 </div>
             </div>
         </section>
