@@ -42,59 +42,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header Styles */
-header {
-    background-color: #f8f8f8;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #ddd;
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-
-header .search-bar {
-    flex: 1;
-    margin: 0 20px;
-    display: flex;
-}
-
-header .search-bar input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-header .cart a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 /* Navbar styles */
 .app-header {
     display: flex;
