@@ -475,6 +475,22 @@ footer .footer-section a {
     text-decoration: none;
 }
 
+/* Footer link interactive styles */
+.footer-columns.container a {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-columns.container a:hover {
+    color: #fff;
+}
+
+/* Footer link hover state */
+.footer-columns.container a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 footer .copyright {
     margin-top: 20px;
     text-align: center;
@@ -771,6 +787,23 @@ footer a {
     color: #fff;
     text-decoration: none;
 }
+
+/* Footer link interactive styles */
+.footer-columns.container a {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-columns.container a:hover {
+    color: #fff;
+}
+
+/* Footer link hover state */
+.footer-columns.container a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .footer-bottom {
     text-align: center;
     margin-top: 20px;

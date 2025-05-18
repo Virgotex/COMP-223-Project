@@ -306,6 +306,10 @@ footer {
     color: #ddd;
     text-decoration: none;
 }
+.footer-columns.container a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 .footer-columns.container ul {
     list-style: none;
     padding: 0;
