@@ -31,9 +31,17 @@ body {
     color: #333; font-weight: 500;
 }
 .cart-button {
-    padding: 8px 15px; background: #f0f0f0;
-    border: none; border-radius: 4px;
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* === Categories === */
