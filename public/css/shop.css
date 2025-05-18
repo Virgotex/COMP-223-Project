@@ -29,7 +29,7 @@ body {
 }
 .search-container input {
     width: 100%;
-    padding: 8px 12px;
+    padding: 8px 12px 8px 36px; /* ensure left padding for search icon */
     border: 1px solid #ccc;
     border-radius: 20px;
 }

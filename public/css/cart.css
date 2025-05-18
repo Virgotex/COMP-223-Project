@@ -25,7 +25,7 @@ body.cart-page {
 }
 .search-container input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 10px 10px 35px; /* add left padding for search icon */
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -136,12 +136,6 @@ body.cart-page {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-/* drop explicit overrides—use .btn-* instead */
-.next-btn {
-}
-
-.cancel-btn {
 }
 .summary {
     flex: 1;
