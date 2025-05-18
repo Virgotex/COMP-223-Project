@@ -78,6 +78,14 @@ body {
     border: 1px solid #ddd; border-radius: 5px;
 }
 
+.feature-banner img {
+  display: block;
+  width: 100%;
+  max-width: 1160px;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* === Promo Section === */
 .promo-section {
     display: grid;
