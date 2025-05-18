@@ -831,3 +831,10 @@ footer a {
         margin-right: 0px;
     }
 }
+
+/* Harmonized font settings across all pages */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
