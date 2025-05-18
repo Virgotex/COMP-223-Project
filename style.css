@@ -112,6 +112,9 @@ button:hover,
     align-items: center;
     gap: 5px;
 }
+.cart-button i {
+    font-size: 1.2rem;
+}
 
 /* Account button styling */
 .account-button {
