@@ -258,8 +258,8 @@ body.cart-page {
 }
 
 .checkout-steps span.active {
-    font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none; /* Remove double underline */
+    font-weight: bold; /* Keep bold styling */
 }
 
 /* force cart prices to match the payment page color */
