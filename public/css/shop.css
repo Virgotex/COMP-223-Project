@@ -140,11 +140,12 @@ hr {
 /* === Banner Section === */
 .banner-section {
     text-align: center;
-    margin: 20px 0;
+    margin: 0;
     padding: 20px;
     background-color: #003366;
-    border-radius: 10px;
+    border-radius: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .banner-title {
