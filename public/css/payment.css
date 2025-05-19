@@ -98,10 +98,15 @@ body {
     padding-bottom: 5px;
 }
 
+.checkout-steps a {
+    color: #888; /* Changed from green to gray */
+    text-decoration: none; /* Remove underline from links */
+}
+
 .checkout-steps span.active {
     color: #333;
     font-weight: bold;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #333; /* Match underline style with other pages */
 }
 
 /* === Main Layout Styles === */

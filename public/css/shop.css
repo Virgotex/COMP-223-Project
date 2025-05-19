@@ -95,17 +95,12 @@ body {
 
 /* === Promo Section === */
 .promo-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px; margin-bottom: 30px;
-    background: #fff; padding: 20px; border-radius: 5px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
 }
-.promo-section > div {
-    border: 1px solid #ddd; border-radius: 5px;
-    padding: 20px; background: #fff;
-}
-.ongoing-sale h2,
-.bestselling h2 { font-size: 1.2em; }
 
 /* === Inspiration & Recommended === */
 .inspiration,
@@ -135,6 +130,52 @@ body {
 hr {
     border: none; border-top: 1px solid #ddd;
     margin: 40px 0;
+}
+
+/* === Banner Section === */
+.banner-section {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #003366;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.banner-title {
+    font-size: 2rem;
+    color: #FFD700;
+}
+
+.banner-description {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.banner-button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #003366;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* === Sale Items Section === */
+.sale-items-section {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sale-item-image {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 /* === Responsive === */
