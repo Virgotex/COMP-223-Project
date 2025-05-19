@@ -163,6 +163,21 @@ hr {
     font-size: 1rem;
 }
 
+/* === Sale Items Section === */
+.sale-items-section {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sale-item-image {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
     .promo-section { grid-template-columns: 1fr; }
